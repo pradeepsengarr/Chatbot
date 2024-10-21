@@ -1,12 +1,11 @@
 import streamlit as st
 from streamlit_chat import message
 import logging
-from text_app import process_answer  # Import the process_answer function
+from text_app import process_answer  
 
-# Configure logging
 logging.basicConfig(level=logging.INFO)
 
-st.set_page_config(layout="wide")  # Set Streamlit layout to wide
+st.set_page_config(layout="wide") 
 
 def display_conversation(history):
     """Display the conversation history in the chat interface."""
@@ -27,17 +26,16 @@ def main():
     if "past" not in st.session_state:
         st.session_state["past"] = ["Hey there!"]
 
-    # User input
+    
     user_input = st.text_input("", key="input")
 
-    # Process user input and update session state
+    
     if user_input:
-        answer = process_answer(user_input)  # Get answer from the model
-        st.session_state["past"].append(user_input)  # Save user query
+        answer = process_answer(user_input)  
+        st.session_state["past"].append(user_input)  
         response = answer
-        st.session_state["generated"].append(response)  # Save model response
+        st.session_state["generated"].append(response) 
 
-    # Display the conversation history
     display_conversation({"past": st.session_state["past"], "generated": st.session_state["generated"]})
 
 if __name__ == "__main__":
