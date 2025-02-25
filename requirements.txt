@@ -1,0 +1,9 @@
+torch
+transformers
+langchain
+langchain-community
+sentence-transformers
+chromadb
+pdfminer.six
+streamlit
+streamlit-chat
