@@ -1,4 +1,4 @@
-PDF-based Question Answering and Summarization System
+PDF based Question Answering and Summarization System
 This project is designed to build a PDF-based Question Answering (QA) and Summarization system using state-of-the-art language models and embeddings. The system allows users to upload multiple PDFs, and it provides precise answers to user questions based on the contents of the documents. Additionally, the system can generate summaries for either entire PDFs or specific topics from the documents.
 
 Key Features:
